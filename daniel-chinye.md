@@ -1,0 +1,4 @@
+# Command Line and GitHub Basics
+In our previous class held on the 28/10/2023, we were introduced to the basics of the command line interface. It was an interactive session where we had the opportunity to learn about CLI commands such as "cd", "ls", "ls -a", "pwd", etc, and also learn from the other participants as well.
+
+After spending time with the basics of the CLI interface, we were guided through the basics of git. We learnt what git is (versioning system) and how it is important in during collaboration. We were able to experience the scenario of setting up git on your computer for the first time, initializing git in a project, making a change in the project file, commiting and staging that commit to the local version system and finally, pushing that commit to the online repository on GitHub. Alot of us in the class had their own opnions on how they understand git and GitHub and it was truly a learning experience.
