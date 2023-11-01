@@ -1,0 +1,26 @@
+GitHub is a web-based hosting service for version control using Git that is mostly used for software code.
+It offers all of the distributed version control and source code management functionality of Git as well as adding its own features.
+
+Difference between Git merging and Git rebasing
+- The main difference between git rebase and git merge is that git rebase creates a new set of commits applied on top of the target branch,
+while git merge creates a new merge commit that combines the changes from both branches.
+
+- Git merge is a way of combining changes from one branch (source branch) into another branch (target branch),
+where as Git rebase is a way of moving the changes from one branch onto another branch.
+
+Some of the git commands we used in the class and their uses
+- git init = TO initialize git on the terminal in any local repository
+
+- git branch -m {name} = To see the branch you are in
+
+- git checkout -b {name} = To create a new branch a new branch and move into its
+
+- git add . = TO add files to the Staging area
+
+-git status = To check the state of your files in the staging area
+
+-git commit -m {message} = To move your files to the HEAD before their are move to the remote repository
+
+-git push origin {name} = To finally move the files to the remote repository in GitHub
+
+-git pull origin {name} = To get files from the remote repository
