@@ -37,3 +37,18 @@ Request to reset a password
 A package arrived was delivered to its destination
 A grocery warehouse updates its inventory
 An unauthorized access attempt was denied
+
+Each of these events is likely to trigger one or more actions or processes in response. One response might be simply to log the event for monitoring purposes. Others might be:
+
+An email to reset the password is sent to the customer
+The sales ticket is closed
+An order for more lettuce (or whatever materials are running low) is placed
+An account is locked and security personnel are notified
+With event-driven architecture, when an event notification is sent, the system captures that something happened like a change in state has occurred and waits to send the reply to whoever requests it, whenever they request it. The application that received that message can either respond or wait to respond until the change in state has occurred that it is waiting for.
+
+Applications built around an event-driven architecture enable more agile, scalable, contextual, and responsive digital business applications.
+
+## How does Event-driven architecture work?
+The components of an event-driven architecture can include three parts: producer, consumer, broker. The broker can be optional, particularly when you have a single producer and a single consumer that are in direct communication with each other and the producer just sends the events to the consumer. An example would be a producer that is sending only to a database or data warehouse so the events are collected and stored for analysis. Most commonly in enterprises, you have multiple sources sending out all types of events with one or more consumers interested in some or all of those events.
+
+Let’s look at an example. If you are a retailer, you might be collecting all of the purchases that are happening at all of your stores all over the world. You are feeding them into your event-driven architecture that is watching for fraud, sending them to a credit card processor or whatever actions need to happen next. For a manufacturer, you have all kinds of data coming off your equipment that is telling you facts like temperature and pressure so you can monitor these events in real time and take actions like predict failures or schedule maintenance, depending on what the data is telling you.
