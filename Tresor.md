@@ -19,4 +19,3 @@
 - mv: Move a file or directory
 - rm: Remove a file a directory
 - touch: Create a file
-- cat: Display a content a file
