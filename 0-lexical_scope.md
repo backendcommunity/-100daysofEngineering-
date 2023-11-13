@@ -35,3 +35,48 @@ function outer() {
 }
 
 outer();
+```
+
+## Example
+```JavaScript
+function example() {
+  let x = 10;
+
+  if (true) {
+    let y = 20;
+    console.log(x); // Accessing x from the outer scope
+    console.log(y); // Accessing y from the local scope
+  }
+
+  console.log(x); // Accessing x from the outer scope
+  // console.log(y); // This would result in an error, as y is not defined in this scope
+}
+
+example();
+```
+
+In this example, the x variable is accessible both inside and outside the if block because it's declared in the outer scope. However, the y variable is only accessible within the if block due to its local scope.
+
+## Closure
+
+Closures are a natural outcome of lexical scope in JavaScript. A closure occurs when a function is defined within another function, and the inner function retains access to the outer function's variables even after the outer function has finished executing.
+
+```JavaScript
+function outer() {
+  let outerVar = 'I am from outer';
+
+  function inner() {
+    console.log(outerVar); // Accessing outerVar from the closure
+  }
+
+  return inner;
+}
+
+const closureFunction = outer();
+closureFunction(); // Logs 'I am from outer'
+
+```
+In this example, the inner function forms a closure over the outerVar, allowing it to access outerVar even after the outer function has completed execution.
+
+## Conclusion
+Understanding lexical scope is crucial for writing maintainable and error-free JavaScript code. It dictates how variables are accessed and provides the foundation for concepts like closures. By grasping lexical scope, developers can write more predictable and organized code.
