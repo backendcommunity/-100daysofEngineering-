@@ -39,3 +39,30 @@ const obj = {};
 obj[Symbol.toStringTag] = 'CustomObject';
 console.log(Object.prototype.toString.call(obj)); // [object CustomObject]
 ```
+
+**2. Symbol.iterator:** A well-known symbol that specifies the default iterator for an object. It is used in the implementation of iterable objects.
+
+```JavaScript
+const array = [1, 2, 3];
+const iterator = array[Symbol.iterator]();
+console.log(iterator.next()); // { value: 1, done: false }
+```
+## Symbol Use Cases
+Symbols are often used in scenarios where unique identifiers are required, such as:
+
+**Object Properties:**
+```JavaScript
+const mySymbol = Symbol('mySymbol');
+const obj = {};
+obj[mySymbol] = 'This is a symbol property';
+console.log(obj[mySymbol]); // This is a symbol property
+```
+
+**Avoiding Naming Collisions:**
+```JavaScript
+const LOG_LEVEL = {
+  INFO: Symbol('info'),
+  WARN: Symbol('warn'),
+  ERROR: Symbol('error')
+};
+```
