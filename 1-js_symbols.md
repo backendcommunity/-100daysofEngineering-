@@ -66,3 +66,11 @@ const LOG_LEVEL = {
   ERROR: Symbol('error')
 };
 ```
+## Global Symbols
+To share symbols across different parts of the code, global symbols can be created using the **Symbol.for()** method.
+
+```JavaScript
+const globalSymbol = Symbol.for('globalSymbol');
+const retrievedSymbol = Symbol.for('globalSymbol');
+console.log(globalSymbol === retrievedSymbol); // true
+```
