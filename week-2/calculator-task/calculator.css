@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@500&family=Space+Mono:wght@700&display=swap');
+
+body{
+    font-family: 'Space Mono', monospace;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+.header{
+    background-color: hsl(185, 41%, 84%);
+    color: hsl(183, 100%, 15%);
+    height: 7rem;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+/* Bill amount */
+.bill_input{
+    margin-left: 1.5rem;
+    padding-top: 2rem;
+}
+.bill_input h3{
+    color: hsl(186, 14%, 43%);
+    margin-bottom: 0.2rem;
+}
+.bill_input input{
+    border-radius: 0.9rem;
+    background-color: hsl(185, 41%, 84%);
+    border: none;
+    height: 3rem;
+    width: 90%;
+    color: hsl(183, 100%, 15%);
+    font-weight: bold;
+    font-size: 1rem;
+    padding-left: 0.5rem;
+    outline: none;
+}
+
+/* select tip button */
+.button_cont{
+    margin-top: 2rem;
+}
+.button_cont h3{
+    color: hsl(186, 14%, 43%);
+    margin-left: 2rem;
+
+}
+.percent_button{
+    display: grid;
+    grid-template-columns: auto auto;
+    /* justify-content: center; */
+    margin-top: 1rem;
+    margin-left: 1.5rem;
+    width: 92%;
+}
+.tipBtn button{
+    width: 7.5rem;
+    height: 3rem;
+    background-color: hsl(183, 81%, 29%);
+    color: white;
+    border-radius: 0.9rem;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border: none;
+    box-shadow: 4px 4px 4px gray;
+}
+.tipBtn.selected button{
+    background-color: hsl(172, 71%, 54%);
+    color: hsl(183, 100%, 15%);  
+}
+  /* .tipBtn button:hover{
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%); 
+} */
+
+.percent_button input{
+    width: 7.5rem;
+    height: 3rem;
+    border-radius: 0.9rem;
+    text-align: center;
+    background-color: hsl(185, 41%, 84%);
+    border: none;
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: hsl(186, 14%, 43%);
+    box-shadow: 4px 4px 4px gray;
+    outline: none;
+}
+
+/* Tip container */
+.tip_cont{
+    margin-top: 2rem;
+    background-color: hsl(183, 100%, 15%);
+    padding: 1rem;
+    width: 85%;
+    height: 19rem;
+    border-radius: 1.5rem;
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+.tip_div{
+    display: flex;
+    justify-content: center;
+    color: white;
+    margin-bottom: 1.5rem;
+}
+.tip_div h3{
+    margin-right: 2rem;
+}
+.tip_div span{
+    color: hsl(186, 14%, 43%);
+}
+
+.tip_amount{
+    font-size: 2rem;
+    color: hsl(172, 67%, 45%);
+}
+
+/* Reset */
+
+.calculate{
+    display: flex;
+    justify-content: center;
+}
+.calculate button{
+    width: 8rem;
+    height: 3rem;
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+    border-radius: 0.9rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border: none;
+    margin-bottom: 1rem;
+    box-shadow: 4px 4px 4px black;
+}
+.calculate button:hover{
+    background-color: hsl(185, 41%, 84%);
+
+}
+.reset{
+    display: flex;
+    justify-content: center;
+}
+.reset button{
+    width: 8rem;
+    height: 3rem;
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+    border-radius: 0.9rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border: none;
+    margin-bottom: 1rem;
+    box-shadow: 4px 4px 4px black;
+}
+
+.reset button:hover{
+    background-color: hsl(185, 41%, 84%);
+
+} 
+.personTotal.selected{
+    background-color: red;
+    color: black;
+}
+
+/* desktop view */
+@media (min-width: 760px){
+    *{
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        
+}
+body{
+    background-color: hsl(185, 41%, 84%);
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    border-radius: 1rem;
+}
+
+/* container for both div */
+.house {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    border-radius: 1.5rem;
+}
+/* left section */
+.leftSection{
+    width: 28rem;
+    /* padding-bottom: 1rem; */
+    margin-left: 1rem;
+}
+.percent_button{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+/* right section */
+.rightSection{
+    width: 25rem;
+    height: 25rem;
+    margin-left: -2rem;
+    margin-right: -1rem;
+
+}
+/* right side inside container */
+.tip_cont{
+    height: 22rem;
+    padding-top: 2rem;
+
+}
+.calculateButtons{
+display: flex;
+margin-left: 1rem;
+margin-top: 7rem;
+}
+.calculateButtons button{
+    margin-right: 1rem;
+}
+.tipBtn button{
+    width: 7rem;
+    height: 2.5rem;
+}
+
+.percent_button input{
+    width: 7rem;
+    height: 2.5rem;
+}
+.noOfPeople {
+    margin-top: -2rem;
+}
+
+.personAmount{
+    margin-right: 4rem;
+}
+.personTotal{
+    margin-right: 4rem;
+}
+}

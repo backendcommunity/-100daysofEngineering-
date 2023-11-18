@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="calculator.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <h1>Tip Calculator</h1>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="house">
+        <div class="leftSection">
+          <div class="bill_input">
+            <h3>Bill</h3>
+            <input type="number" placeholder="$" class="amount" min="0" />
+          </div>
+
+          <!-- select tip section -->
+
+          <div class="button_cont">
+            <div>
+              <h3>Select Tip %</h3>
+            </div>
+            <div class="percent_button">
+              <div class="tipBtn"><button>5%</button></div>
+              <div class="tipBtn"><button>10%</button></div>
+              <div class="tipBtn"><button>15%</button></div>
+              <div class="tipBtn"><button>25%</button></div>
+              <div class="tipBtn"><button>50%</button></div>
+              <div> <input type="number" placeholder="Custom" class="custom" min="0"/> </div>
+            </div>
+
+            <div class="bill_input noOfPeople">
+              <h3>Number of people</h3>
+              <input type="number" placeholder="No." class="multiplyPeople" min="0"/>
+            </div>
+          </div>
+        </div>
+
+        <!-- calculate section -->
+        <div class="rightSection">
+          <div class="tip_cont">
+
+            <div class="tip_div">
+              <div class="personAmount">
+                <h3>
+                  Amount <br />
+                  <span>/ person</span>
+                </h3>
+              </div>
+              <div><p class="tip_amount" id="amountPerson"> 0.00 </p></div>
+            </div>
+
+            <div class="tip_div">
+              <div class="personTotal">
+                <h3>
+                  Total <br />
+                  <span>/ person</span>
+                </h3>
+              </div>
+              <div> <p  class="tip_amount" id="totalPerson"> 0.00 </p></div>
+            </div>
+
+            <div class="calculateButtons">
+            <div class="calculate">
+              <button>Calculate</button>
+            </div>
+
+            <div class="reset">
+              <button>RESET</button>
+            </div>
+          </div>
+          </div>
+
+        </div>
+      </div>
+    </main>
+
+    <script src="calculator.js"></script>
+  </body>
+</html>
