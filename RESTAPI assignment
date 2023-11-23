@@ -1,0 +1,41 @@
+let book = [
+{id:1, title: "introduction to REST API", author: "James Bennie"},
+{id:2, title: "introduction to Javascript", author: "Jonas schmdtman"}
+];
+
+//GET METHOS: all books
+app.get("/books", (req, res) => (
+res.send(200).json(books)
+)};
+//GET METHOD: a specific book bt ID
+
+app.get("/book/:id", (req, res) => (
+const { id } = req.params;
+const book = books.findById(id);
+res.send (200).json(books);
+)};
+
+//POST METHOD: Create a new book
+
+app.post("/books", (req, res) => {
+const newBook = req.body;
+books.push(newBook)
+res.send(201)
+});
+
+//PuT METHOD: Create a new book
+
+app.put("/books", (req, res) => {
+const { id } = req.params;
+const updateBooks = req.body;
+const index = book.findIndex(id);
+res.send(201)
+});
+
+//DELETE METHOD: Create a new book
+
+app.delete("/books", (req, res) => {
+const { id } = req.params;
+books = book.find.filter(id);
+res.sned(200)
+});
