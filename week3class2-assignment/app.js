@@ -7,11 +7,6 @@ app.use(express.static('./public'));
 app.use(express.json());
 app.use(morgan('tiny'));
 
-// *GET method
-app.get('/api/bookstore', (req, res) => {
-  res.status(200).json({ success: true, data: books });
-});
-
 // * POST method
 
 app.post('/api/bookstore', (req, res) => {
@@ -28,6 +23,12 @@ app.post('/api/bookstore', (req, res) => {
     data: [...books, { id: newID, name: name, price: price, author: author }],
   });
 });
+
+// *GET method
+app.get('/api/bookstore', (req, res) => {
+  res.status(200).json({ success: true, data: books });
+});
+
 
 // * PUT method
 app.put('/api/bookstore/:id', (req, res) => {
